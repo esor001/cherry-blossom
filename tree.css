@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+  display: flex;
+}
+
+body {
+    background: white;
+    background-image: url(tree.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    transition: background 2s;
+}
+
+.main-container {
+    background: lightblue;
+    padding: 20px;
+    height:500px;
+    display:flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items:center;
+    align-content: stretch;
+    gap:20px;
+  }

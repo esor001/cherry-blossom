@@ -2,30 +2,123 @@
     box-sizing: border-box;
 }
 
+main {
+  display: flex;
+}
+
 body {
-    background: lightblue;
+    background: white;
+    background-image: url(tree\ 6.png);
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-size: cover;
+    position: relative;
     transition: background 2s;
+    height: 100vh;
+    margin: 0;
+    overflow:hidden;
 }
 
 body.activated {
-    background: darkslategray;
+    background: rgb(171, 146, 157);
+    background-image: url(tree7.png);
+    background-size: cover;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  src: url("tree\ 7.png");
+}
+
+.menubtn {
+  position: absolute;
+  top:30px;
+  left:30px;
+}
+.player {
+  opacity: 5%;
+  transition: opacity 2s;
+}
+
+.player:hover {
+  opacity: 100%
+}
+
+.tree {
+  display: flex;
+  position:relative;
+  width: 100vw;
+  top:-10px;
+  left:-10px;
+  opacity:0;
+  transition: opacity 2s;
+}
+
+/* .tree:hover {
+  opacity:100%;
+} */
+
+.tree1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.tree2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree2.png)
+}
+.tree3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree3.png)
+}
+.tree4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree4.png)
+}
+.tree5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree5.png)
+}
+.tree6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree6.png)
+}
+.tree7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(tree7.png)
+}
+
 
 .box {  
   padding: 20px;
-  background-color: slategray;
+  background-color: rgba(0, 0, 0, 0.327);
   font-size: 20px;
   position: fixed;
   top:0;
-  right:-300px;
-  width:300px;
+  right:-30vw;
+  width:30vw;
   height:100vh;
-  border-left:1px solid;
+  border-left: none;
   transition: right .5s;
 }
 
 .box.activated {
-  right:0;
+  right:0vw;
 }
 
 button {
@@ -44,27 +137,24 @@ button:active {
     background: lightgreen;
 }
 
-.square {
+.blossom {
     position: fixed;
     bottom:30px;
     left:30px;
-    background: cornflowerblue;
-    width: 100px;
-    height:100px;
-    border: 1px solid;
+    background: none;
+    width: 10vw;
+    border: none;
     transition: all 1s;
 }
 
-.square.activated {
-    background: lightyellow;
-    transform: rotate(360deg);
+.blossom.activated {
+    transform: rotate(720deg);
 }
-/* 
-.activated {
-    border: 4px solid;
-} */
 
-/* pseudo classes */
+.blossom:hover {
+    width: 15vw;
+    
+}
   
   .ground {
     position: fixed;
@@ -75,112 +165,116 @@ button:active {
     background:rgb(109, 139, 156);
     transition:background 2s;
   }
-  
-  .trunk {
-    position: fixed;
-    bottom:20vh;
-    left:45%;
-    width:10vw;
-    height:40vh;
-    background:rgb(109, 139, 156);
-    transition:background 2s, transform 2s;
-    transform-origin: bottom center;
+
+  .thoughts {
+    background:rgb(255, 255, 255);
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: column;
+    opacity: 90%;
   }
   
-  .branch {
-    position: fixed;
-    bottom:52vh;
-    left:40%;
-    width:5vw;
-    height:30vh;
-    transform: rotate(-45deg);
-    background:rgb(109, 139, 156);
-    transition:background 2s, opacity .5s;
+  form {
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(254, 201, 250);
+    font-style: italic;
+  
+  }
+ 
+  input[type=submit] {
+    cursor: pointer;
+    background-color: #c9f7ff;
+    border-radius: 8px;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+  }
+
+  input[type=submit]:hover {
+    background-color: rgb(253, 197, 255);
+  } 
+  input[type=text]:focus {
+    background-color: lightblue;
+    transition: background 1s;
   }
   
-  .b2 {
-    transform: rotate(45deg);
-    left:55%;
-  }
+    
+  input[type=text]:hover {
+    background-color: lightblue;
+    transition: background 1s;
   
-  .leaves {
-    position: fixed;
-    bottom:50vh;
-    left:23%;
-    width:54vw;
-    height:40vh;
-    border-radius:50%;
-    background:rgb(203, 110, 76);
-    opacity: 0;
-    transition: opacity 2s, background 2s, bottom 2s, transform 2s;
-    z-index: 5;
-    transform-origin: bottom center;
   }
+
+
+
+  input[type=text] {
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #c3c3c3;
+  height: 100px;
+  width: 300px;
+  background-color: rgb(255, 221, 135);
+}
+
+
+  @media screen and (max-width: 1500px) {
   
-  .apple {
-    position: absolute;
-    height:8%;
-    width:8%;
-    border-radius: 50%;
-    background:rgb(226, 86, 86);
-    transition: opacity 2s, transform 4s;
-    /* transform: scale(0); */
-    opacity: 0;
+    body {
+      background: lightblue;
+      background-image: url(tree6.png);
+    }
+    .ground {
+      background:rgb(179, 155, 85);
+    }
+    .tree6.tree7{
+      background-image:none;
+    }
   }
+    
+  @media screen and (max-width: 1300px) {
   
-  .a1 {
-    top:0%;
-    left:35%;
+    body {
+      background: lightblue;
+      background-image: url(tree5.png);
+    }
+    .ground {
+      background:rgb(179, 155, 85);
+    }
+    .tree5.tree6.tree7{
+      background-image:none;
+    } 
+
   }
-  
-  .a2 {
-    top:30%;
-    left:85%;
-  }
-  
-  .a3 {
-    top:70%;
-    left:5%;
-  }
-  
-  .a4 {
-    top:80%;
-    left:75%;
-  }
-  
-  .a5 {
-    top:40%;
-    left:10%;
-  }
-  
-  .a6 {
-    top:50%;
-    left:45%;
-  }
-  
-  .a7 {
-    top:90%;
-    left:35%;
-  }
-  
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1100px) {
     /* FALL */
   
     body {
-      background: rgb(189, 90, 48);
-    }
-  
-    .leaves {
-      opacity:.96;
-      background:rgb(203, 110, 76);
-    }
-  
-    .trunk, .branch {
-      background:rgb(98, 83, 78);
+      background: rgb(48, 163, 189);
+      background-image: url(tree4.png);
     }
   
     .ground {
       background:rgb(179, 155, 85);
+    }
+
+    .tree4{
+      background-image: none;
+    }
+    .tree5{
+      background-image: none;
+    }
+    .tree6{
+      background-image: none;
+    }
+    .tree7{
+      background-image: none;
     }
   }
   
@@ -189,55 +283,87 @@ button:active {
   
     body {
       background: rgb(254, 249, 190);
-    }
-  
-    .leaves {
-      opacity: 1;
-      background:rgb(129, 159, 95);
-    }
-  
-    .apple {
-      transform: scale(1);
-      opacity: 1;
-    }
-  
-    .branch {
-      opacity:0;
-    }
-  
-    .trunk, .branch {
-      background:rgb(96, 98, 78);
+      background-image: url(tree3.png);
     }
   
     .ground {
       background:rgb(116, 130, 77);
     }
+    .tree3{
+      background-image: none;
+    }
+    .tree4{
+      background-image: none;
+    }
+    .tree5{
+      background-image: none;
+    }
+    .tree6{
+      background-image: none;
+    }
+    .tree7{
+      background-image: none;
+    }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     /* SPRING */
   
     body {
-      background: rgb(225, 235, 198);
-    }
-  
-    .leaves {
-      background:rgb(204, 233, 142);
-      bottom: 30vh;
-      transform: scale(.2);
-    }
-  
-    .apple {
-      transform: scale(0);
-    }
-  
-    .trunk {
-      background:rgb(204, 233, 142);
-      transform: scale(40%, 40%);
+      background: rgb(170, 203, 140);
+      background-image: url(tree2.png);
     }
   
     .ground {
       background:rgb(176, 181, 116);
     }
+    .tree2{
+      background-image: none;
+    }
+    .tree3{
+      background-image: none;
+    }
+    .tree4{
+      background-image: none;
+    }
+    .tree5{
+      background-image: none;
+    }
+    .tree6{
+      background-image: none;
+    }
+    .tree7{
+      background-image: none;
+    }
   }
+
+  @media screen and (max-width: 500px) {
+    /* SPRING */
   
+    body {
+      background: rgb(170, 203, 140);
+      background-image: url(tree1.png);
+    }
+  
+    .ground {
+      background:rgb(176, 181, 116);
+    }
+    .tree2{
+      background-image: none;
+    }
+    .tree3{
+      background-image: none;
+    }
+    .tree4{
+      background-image: none;
+    }
+    .tree5{
+      background-image: none;
+    }
+    .tree6{
+      background-image: none;
+    }
+    .tree7{
+      background-image: none;
+    }
+  }

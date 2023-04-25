@@ -38,3 +38,19 @@ $(".reveal-btn").click(function(){
     $(".reveal-btn").hide();
   });
 
+  let music = new Audio({
+    loop: true,
+    volume: 1,
+    src: ['https://www.youtube.com/embed/eG4IQQ9AM2g']
+})
+
+$(document).ready(function(){
+  $("form").submit(function(){
+      var text = document.getElementById("myText").value; 
+    alert("Hi! I hope you have a wonderful day :)");
+
+  });
+});
+
+
+
