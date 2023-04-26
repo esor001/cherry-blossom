@@ -115,6 +115,7 @@ img {
   height:100vh;
   border-left: none;
   transition: right .5s;
+  overflow-y: auto;
 }
 
 .box.activated {
@@ -227,7 +228,7 @@ button:active {
   @media screen and (max-width: 1500px) {
   
     body {
-      background: lightblue;
+      background-color: lightblue;
       background-image: url(tree6.png);
     }
     .ground {
@@ -241,7 +242,7 @@ button:active {
   @media screen and (max-width: 1300px) {
   
     body {
-      background: lightblue;
+      background-color: lightblue;
       background-image: url(tree5.png);
     }
     .ground {
@@ -256,7 +257,7 @@ button:active {
     /* FALL */
   
     body {
-      background: rgb(48, 163, 189);
+      background-color: rgb(48, 163, 189);
       background-image: url(tree4.png);
     }
   
@@ -282,7 +283,7 @@ button:active {
     /* SUMMER */
   
     body {
-      background: rgb(254, 249, 190);
+      background-color: rgb(254, 249, 190);
       background-image: url(tree3.png);
     }
   
@@ -310,7 +311,7 @@ button:active {
     /* SPRING */
   
     body {
-      background: rgb(170, 203, 140);
+      background-color: rgb(170, 203, 140);
       background-image: url(tree2.png);
     }
   
@@ -341,7 +342,7 @@ button:active {
     /* SPRING */
   
     body {
-      background: rgb(170, 203, 140);
+      background-color: rgb(170, 203, 140);
       background-image: url(tree1.png);
     }
   
