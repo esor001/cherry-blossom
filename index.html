@@ -8,6 +8,12 @@
 
 <div class="main">
         <body>
+                <button id="music-btn" onclick="togglePlay()">play/pause</button>
+
+                <audio id="my-sound" controls>
+                  <source src="Spring Wind.mp3" type="audio/mpeg">
+                </audio>
+
         <div class="tree">
                 <!-- <div class="tree1"></div>
                 <div class="tree2"></div>
@@ -62,6 +68,17 @@
 </div>
 
 <script>
+var audioElement = document.getElementById("my-sound");
+function togglePlay() {
+    if (audioElement.paused) {
+        audioElement.play();
+    }
+    else {
+        audioElement.pause();
+    }
+};
+</script>
+        <script>
         // this is the function we want to call when the button is clicked
         function toggleClass() {
           // first we set up a variable to store a longer line of code in case we want to reference it quickly later

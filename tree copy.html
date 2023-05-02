@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+        <title>home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="tree.css">
+</head>
+
+<body>
+    <button id="music-btn" onclick="togglePlay()">play/pause</button>
+
+    <audio id="my-sound" controls>
+      <source src="Spring Wind.mp3" type="audio/mpeg">
+    </audio>
+    <div class="main-container">
+        <div class="option-container-top">
+        </div>
+        <div class="main-tree">
+            <img src="tree-spring-green.png">
+        </div>
+        <div class="option-container-bottom">
+            
+        </div>
+    </div>
+
+    <div id="menu" class="box">
+    </div>
+
+    <div class="menubtn">
+        <button onclick="toggleClass()">Click me...</button>
+</div>
+
+<!-- <div class="ground"></div> -->
+
+<div id="obj"class="blossom">
+        <a href="tree.html"><img src="blossom template.png"></a>
+</div>
+
+
+
+<script>
+    var audioElement = document.getElementById("my-sound");
+    function togglePlay() {
+        if (audioElement.paused) {
+            audioElement.play();
+        }
+        else {
+            audioElement.pause();
+        }
+    };
+    </script>
+            <script>
+            // this is the function we want to call when the button is clicked
+            function toggleClass() {
+              // first we set up a variable to store a longer line of code in case we want to reference it quickly later
+              // here, we're creating a shorthand way of targeting a specific element with an id by using javascript's getElementById method
+              var menu = document.getElementById("menu");
+              var obj = document.getElementById("obj");
+              var docbody= document.body;
+            
+              // in this line we use javascript's built-in classList property and toggle method to toggle a class on and off
+              menu.classList.toggle("activated");
+              obj.classList.toggle("activated");
+              docbody.classList.toggle ("activated");
+            }
+            </script>
+            <script src="jquery-3.6.4.min.js">
+            </script>
+            <script src="jquery-ui.min.js"></script>
+            <script src="functions.js"></script>
+    </body>
+    </html>

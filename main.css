@@ -25,6 +25,10 @@ body.activated {
     background-size: cover;
 }
 
+audio {
+  display:none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -153,8 +157,7 @@ button:active {
 }
 
 .blossom:hover {
-    width: 15vw;
-    
+    width: 15vw;   
 }
   
   .ground {
@@ -231,12 +234,6 @@ button:active {
       background-color: lightblue;
       background-image: url(tree6.png);
     }
-    .ground {
-      background:rgb(179, 155, 85);
-    }
-    .tree6.tree7{
-      background-image:none;
-    }
   }
     
   @media screen and (max-width: 1300px) {
@@ -245,13 +242,6 @@ button:active {
       background-color: lightblue;
       background-image: url(tree5.png);
     }
-    .ground {
-      background:rgb(179, 155, 85);
-    }
-    .tree5.tree6.tree7{
-      background-image:none;
-    } 
-
   }
   @media screen and (max-width: 1100px) {
     /* FALL */
@@ -259,23 +249,6 @@ button:active {
     body {
       background-color: rgb(48, 163, 189);
       background-image: url(tree4.png);
-    }
-  
-    .ground {
-      background:rgb(179, 155, 85);
-    }
-
-    .tree4{
-      background-image: none;
-    }
-    .tree5{
-      background-image: none;
-    }
-    .tree6{
-      background-image: none;
-    }
-    .tree7{
-      background-image: none;
     }
   }
   
@@ -286,25 +259,6 @@ button:active {
       background-color: rgb(254, 249, 190);
       background-image: url(tree3.png);
     }
-  
-    .ground {
-      background:rgb(116, 130, 77);
-    }
-    .tree3{
-      background-image: none;
-    }
-    .tree4{
-      background-image: none;
-    }
-    .tree5{
-      background-image: none;
-    }
-    .tree6{
-      background-image: none;
-    }
-    .tree7{
-      background-image: none;
-    }
   }
   
   @media screen and (max-width: 700px) {
@@ -314,28 +268,6 @@ button:active {
       background-color: rgb(170, 203, 140);
       background-image: url(tree2.png);
     }
-  
-    .ground {
-      background:rgb(176, 181, 116);
-    }
-    .tree2{
-      background-image: none;
-    }
-    .tree3{
-      background-image: none;
-    }
-    .tree4{
-      background-image: none;
-    }
-    .tree5{
-      background-image: none;
-    }
-    .tree6{
-      background-image: none;
-    }
-    .tree7{
-      background-image: none;
-    }
   }
 
   @media screen and (max-width: 500px) {
@@ -344,27 +276,5 @@ button:active {
     body {
       background-color: rgb(170, 203, 140);
       background-image: url(tree1.png);
-    }
-  
-    .ground {
-      background:rgb(176, 181, 116);
-    }
-    .tree2{
-      background-image: none;
-    }
-    .tree3{
-      background-image: none;
-    }
-    .tree4{
-      background-image: none;
-    }
-    .tree5{
-      background-image: none;
-    }
-    .tree6{
-      background-image: none;
-    }
-    .tree7{
-      background-image: none;
     }
   }

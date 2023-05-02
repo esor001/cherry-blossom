@@ -7,23 +7,242 @@ main {
 }
 
 body {
-    background: white;
-    background-image: url(tree.png);
+    background-color: white;
+    /* background-image: url("tree-spring-blossom.png"); */
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: 80vw;
     position: relative;
     transition: background 2s;
+    height: 100vh;
+    margin: 0;
+    overflow:hidden;
 }
 
 .main-container {
-    background: lightblue;
-    padding: 20px;
-    height:500px;
-    display:flex;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
     /* flex-wrap: wrap; */
     justify-content: center;
-    align-items:center;
-    align-content: stretch;
-    gap:20px;
+    align-items: center;
   }
+
+.option-container-top {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+
+.tree {
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    transition: 2s;
+  }
+
+
+.tree-spring-green {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.spring {
+    opacity:1;
+}
+.body.spring {
+    background: rgb(84, 126, 21);
+    background-image: url("tree-spring-green.png")
+}
+.tree-spring-green.spring {
+    opacity:1;
+}
+
+.tree-bloom {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.bloom {
+    opacity:1;
+}
+.body.bloom {
+    background: rgb(84, 126, 21);
+}
+.tree-bloom.bloom {
+    opacity:1;
+}
+
+.tree-summer {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.summer {
+    opacity:1;
+}
+.body.summer {
+    background: rgb(84, 126, 21);
+}
+.tree-summer.summer {
+    opacity:1;
+}
+
+
+
+.tree-fall1 {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.fall1 {
+    opacity:1;
+}
+.body.fall1 {
+    background: rgb(84, 126, 21);
+}
+.tree-fall1.fall1 {
+    opacity:1;
+}
+
+
+
+.tree-fall2 {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.fall2 {
+    opacity:1;
+}
+.body.fall2 {
+    background: rgb(84, 126, 21);
+}
+.tree-fall2.fall2 {
+    opacity:1;
+}
+
+.tree-winter {
+    opacity:0;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    width:80vw;
+    opacity:0;
+    transition: opacity .5s;
+}
+.tree.winter {
+    opacity:1;
+}
+.body.winter {
+    background: rgb(84, 126, 21);
+}
+.tree-winter.winter {
+    opacity:1;
+}
+
+
+.option-container-bottom {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+  }
+audio {
+    display:none;
+  }
+  
+img {
+    display: block;
+    max-height: 90vh;
+    height: auto;
+    margin: 0 auto;
+}
+
+.blossom {
+    position: fixed;
+    bottom:30px;
+    left:30px;
+    background: none;
+    width: 10vw;
+    border: none;
+    transition: all 1s;
+    max-height: 10vh;
+}
+
+.blossom:hover {
+    width: 15vw;   
+    transform: rotate(720deg);
+}
+
+.blossom.activated {
+    transform: rotate(720deg);
+}
+
+.box {  
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.327);
+    font-size: 20px;
+    position: fixed;
+    top:0;
+    right:-30vw;
+    width:30vw;
+    height:100vh;
+    border-left: none;
+    transition: right .5s;
+    overflow-y: auto;
+  }
+
+  .box.activated {
+    right:0vw;
+  }
+
+  .menubtn {
+    position: absolute;
+    top:30px;
+    left:30px;
+  }
+
+  button {
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+    background: white;
+    transition: background .2s;
+}
+
+button:hover {
+    background: pink;
+}
+
+button:active {
+    background: lightgreen;
+}

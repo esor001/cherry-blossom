@@ -1,42 +1,48 @@
-$(".dark-btn").click(function(){
-    $(".box").toggleClass("dark");
-    $("body").toggleClass("dark");
-  });
-//   don't have to us . for toggle class
-$(".glow-btn").click(function(){
-    $(".box").toggleClass("glow");
+$(".spring-btn").click(function(){
+    $(".tree").toggleClass("spring");
+    $("body").toggleClass("spring");
+    $(".tree-spring-green").toggleClass("spring");
   });
 
-$(".spin-btn").click(function(){
-    $(".box").toggleClass("spin");
-    // $(".ufo").removeClass("show");
+  $(".bloom-btn").click(function(){
+    $(".tree").toggleClass("bloom");
+    $("body").toggleClass("bloom");
+    $(".tree-bloom").toggleClass("bloom");
 
   });
 
-$(".reveal-btn").click(function(){
-    $(".ufo").css({
-        "opacity":"1"
-    });
-    $(".reveal-btn").hide();
+  $(".summer-btn").click(function(){
+    $(".tree").toggleClass("summer");
+    $("body").toggleClass("summer");
+    $(".tree-summer").toggleClass("summer");
+
   });
+
+  $(".fall1-btn").click(function(){
+    $(".tree").toggleClass("fall1");
+    $("body").toggleClass("fall1");
+    $(".tree-fall1").toggleClass("fall1");
+
+  });
+
+  $(".fall2-btn").click(function(){
+    $(".tree").toggleClass("fall2");
+    $("body").toggleClass("fall2");
+    $(".tree-fall2").toggleClass("fall2");
+
+  });
+
+  $(".winter-btn").click(function(){
+    $(".tree").toggleClass("winter");
+    $("body").toggleClass("winter");
+    $(".tree-winter").toggleClass("winter");
+
+  });
+
 
 $( ".draggable" ).draggable({ 
    snap: true 
 });
-
-$(".hint-btn").click(function(){
-  $(".hint").css({
-    "opacity":"1"
-  });
-  $(".hint-btn").hide();
-});
-
-$(".reveal-btn").click(function(){
-    $(".puzzle").css({
-        "opacity":"1"
-    });
-    $(".reveal-btn").hide();
-  });
 
   let music = new Audio({
     loop: true,
