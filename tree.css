@@ -262,18 +262,27 @@ img {
 
   button {
     padding: 10px;
-    border: 1px solid;
+    border: 1px rgb(141, 141, 141) solid;
+    margin: 3px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.548);
     transition: background-color .2s;
 }
 
 button:hover {
-    background: pink;
+    background-color: rgba(194, 84, 104, 0.329);
+    border: 1px rgb(255, 255, 255) solid;
+    color: rgb(255, 255, 255);
 }
 
 button:active {
     background-color: lightgreen;
+}
+
+button:focus {
+    background-color: rgba(194, 84, 104, 0.329);
+    border: 1px rgb(255, 255, 255) solid;
+    color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 1500px) {

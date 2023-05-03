@@ -2,6 +2,7 @@ $(".spring-btn").click(function(){
     $(".tree").toggleClass("spring");
     $("body").toggleClass("spring");
     $(".tree-spring-green").toggleClass("spring");
+    $("button").toggleClass("spring");
   });
 
   $(".bloom-btn").click(function(){
@@ -64,10 +65,10 @@ $('.play').click(function(){
   var id = $this.attr('id').replace(/btn/, '');
   $this.toggleClass('active');
   if($this.hasClass('active')){
-      $this.text('pause'); 
+      // $this.text('pause'); 
       $('audio[id^="sound"]')[id-1].play();        
   } else {
-      $this.text('play');
+      // $this.text('play');
       $('audio[id^="sound"]')[id-1].pause();
   }
 });
