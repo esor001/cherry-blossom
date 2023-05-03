@@ -16,11 +16,15 @@ body {
     transition: background 2s;
     height: 100vh;
     margin: 0;
-    overflow:hidden;
+    overflow:scroll;
+}
+
+.drag {
+    cursor: grab;
 }
 
 .main-container {
-    background-color: none;
+    /* background-color: none; */
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
@@ -38,7 +42,7 @@ body {
   }
 
 .tree {
-    background-color: none;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,9 +63,10 @@ body {
 }
 .tree.spring {
     opacity:1;
+    background-color: rgb(84, 126, 21);
 }
 .body.spring {
-    background: rgb(84, 126, 21);
+    background-color: rgb(84, 126, 21);
     background-image: url("tree-spring-green.png")
 }
 .tree-spring-green.spring {
@@ -81,11 +86,16 @@ body {
     opacity:1;
 }
 .body.bloom {
-    background: rgb(84, 126, 21);
+    background-color: rgb(84, 126, 21);
 }
 .tree-bloom.bloom {
     opacity:1;
 }
+.petals.bloom {
+    background-image: url(cherryblossom-petal.png)
+}
+
+
 
 .tree-summer {
     opacity:0;
@@ -100,7 +110,7 @@ body {
     opacity:1;
 }
 .body.summer {
-    background: rgb(84, 126, 21);
+    background-color: rgb(84, 126, 21);
 }
 .tree-summer.summer {
     opacity:1;
@@ -166,6 +176,9 @@ body {
 .tree-winter.winter {
     opacity:1;
 }
+.snow.winter {
+    background-image: url(snowflake.png)
+}
 
 
 .option-container-bottom {
@@ -207,6 +220,22 @@ img {
     transform: rotate(720deg);
 }
 
+.petals{
+    width: 9px;
+    height:9px;
+    position:absolute;
+    background-image: none;
+    background-size: 100% 100%;
+  }
+
+  .snow{
+    width: 8px;
+    height:8px;
+    position:absolute;
+    background-image: none;
+    background-size: 100% 100%;
+  }
+
 .box {  
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.327);
@@ -235,8 +264,8 @@ img {
     padding: 10px;
     border: 1px solid;
     cursor: pointer;
-    background: white;
-    transition: background .2s;
+    background-color: white;
+    transition: background-color .2s;
 }
 
 button:hover {
@@ -244,5 +273,56 @@ button:hover {
 }
 
 button:active {
-    background: lightgreen;
+    background-color: lightgreen;
 }
+
+@media screen and (max-width: 1500px) {
+  
+    body {
+      background-color: lightblue;
+      /* background-image: url(tree6.png); */
+    }
+  }
+    
+  @media screen and (max-width: 1300px) {
+  
+    body {
+      background-color: lightblue;
+      /* background-image: url(tree5.png); */
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    /* FALL */
+  
+    body {
+      background-color: rgb(48, 163, 189);
+      /* background-image: url(tree4.png); */
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    /* SUMMER */
+  
+    body {
+      background-color: rgb(254, 249, 190);
+      /* background-image: url(tree3.png); */
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    /* SPRING */
+  
+    body {
+      background-color: rgb(170, 203, 140);
+      /* background-image: url(tree2.png); */
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    /* SPRING */
+  
+    body {
+      background-color: rgb(170, 203, 140);
+      /* background-image: url(tree1.png); */
+    }
+  }

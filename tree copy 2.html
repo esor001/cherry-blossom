@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+        <title>home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="tree.css">
+</head>
+
+<body>
+    <div id="container">
+    </div>
+        <button onclick="toggleClass()">Click me...</button>
+<button id="music-springwind-btn" onclick="togglePlay()">♫ spring wind ♫</button>
+<button id="music-nostalgicspring-btn" onclick="togglePlay()">♫ nostalgic spring ♫</button>
+<button id="music-winter-btn" onclick="togglePlay()">♫ winter ♫</button>
+<button id="music-silentnight-btn" onclick="togglePlay()">♫ silent night ♫</button>
+<button id="music-bird-btn" onclick="togglePlay()">♫ bird </button>
+<button id="music-rain-btn" onclick="togglePlay()">♫ rain </button>
+<button id="music-thunder-btn" onclick="togglePlay()">♫ thunder </button>
+<button id="music-stream-btn" onclick="togglePlay()">♫ stream </button>
+<button id="music-forest-btn" onclick="togglePlay()">♫ forest </button>
+<button id="music-windchimes-btn" onclick="togglePlay()">♫ wind chimes </button>
+    <button class="spring-btn">🌲spring🌲</button>
+        <button class="bloom-btn">🌲blooming🌲</button>
+        <button class="summer-btn">🌲summer🌲</button>
+        <button class="fall1-btn">🌲fall🌲</button>
+        <button class="fall2-btn">🌲falling🌲</button>
+        <button class="winter-btn">🌲winter🌲</button>
+
+    <audio id="music-springwind" controls>
+      <source src="Spring Wind.mp3" type="audio/mpeg">
+      <source src="nostalgic-spring.mp3" type="audio/mpeg">
+      <source src="winter.mp3" type="audio/mpeg">
+      <source src="silent-night.mp3" type="audio/mpeg">
+      <source src="birds.mp3" type="audio/mpeg">
+      <source src="rain-drops.mp3" type="audio/mpeg">
+      <source src="rain-and-thunder.mp3" type="audio/mpeg">
+      <source src="stream.mp3" type="audio/mpeg">
+      <source src="rain-forest-birds.mp3" type="audio/mpeg">
+      <source src="wind-chimes-bells.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="music-nostalgicspring" controls>
+        <source src="nostalgic-spring.mp3" type="audio/mpeg">
+      </audio>
+    
+    <!-- <div class="main-container"> -->
+        <!-- <div class="option-container-top"> -->
+        <!-- </div> -->
+        <!-- <div class="tree"> -->
+            <img class="tree-spring-green drag" src="tree-spring-green.png">
+            <img class="tree-bloom drag" src="tree-spring-blossom.png">
+            <img class="tree-summer drag" src="tree-summer.png">
+            <img class="tree-fall1 drag" src="tree-fall1.png">
+            <img class="tree-fall2 drag" src="tree-fall2.png">
+            <img class="tree-winter drag" src="tree-winter.png">
+            <!-- <img class="tree-spring-green draggable" src="tree-spring-blossom.png">
+            <img class="tree-spring-green draggable" src="tree-summer.png">
+            <img class="tree-spring-green draggable" src="tree-fall1.png">
+            <img class="tree-spring-green draggable" src="tree-fall2.png">
+            <img class="tree-spring-green draggable" src="tree-winter.png"> -->
+            
+        <!-- </div> -->
+        <!-- <div class="option-container-bottom"> -->
+            
+        <!-- </div> -->
+    <!-- </div> -->
+
+    <div id="menu" class="box">
+        <a href="index.html"><img src="puzzle button.png"></a>
+    </div>
+
+
+
+<div id="obj"class="blossom">
+        <a href="index.html"><img class="drag" src="blossom template.png"></a>
+</div>
+
+
+
+
+<script>
+    var audioElement = document.getElementById("music-springwind");
+    function togglePlay() {
+        if (audioElement.paused) {
+            audioElement.play();
+        }
+        else {
+            audioElement.pause();
+        }
+    };
+</script>
+<script>
+    var audioElement = document.getElementById("music-nostalgicspring");
+    function togglePlay() {
+        if (audioElement.paused) {
+            audioElement.play();
+        }
+        else {
+            audioElement.pause();
+        }
+    };
+</script>
+            <script>
+            // this is the function we want to call when the button is clicked
+            function toggleClass() {
+              // first we set up a variable to store a longer line of code in case we want to reference it quickly later
+              // here, we're creating a shorthand way of targeting a specific element with an id by using javascript's getElementById method
+              var menu = document.getElementById("menu");
+              var obj = document.getElementById("obj");
+              var docbody= document.body;
+            
+              // in this line we use javascript's built-in classList property and toggle method to toggle a class on and off
+              menu.classList.toggle("activated");
+              obj.classList.toggle("activated");
+              docbody.classList.toggle ("activated");
+            }
+            </script>
+            <script src="jquery-3.6.4.min.js">
+            </script>
+            <script src="jquery-ui.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+            <script src="functions.js"></script>
+    </body>
+    </html>

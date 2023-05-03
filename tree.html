@@ -7,40 +7,83 @@
 </head>
 
 <body>
+    <div id="container">
+    </div>
         <button onclick="toggleClass()">Click me...</button>
-<button id="music-btn" onclick="togglePlay()">play/pause</button>
-    <button class="spring-btn">spring</button>
-        <button class="bloom-btn">blooming</button>
-        <button class="summer-btn">summer</button>
-        <button class="fall1-btn">fall</button>
-        <button class="fall2-btn">falling</button>
-        <button class="winter-btn">winter</button>
+<!-- <button class="music-btn" onclick="togglePlay()">♫ spring wind ♫</button> -->
 
-    <audio id="my-sound" controls>
+    <button class="spring-btn">🌲spring🌲</button>
+        <button class="bloom-btn">🌲blooming🌲</button>
+        <button class="summer-btn">🌲summer🌲</button>
+        <button class="fall1-btn">🌲fall🌲</button>
+        <button class="fall2-btn">🌲falling🌲</button>
+        <button class="winter-btn">🌲winter🌲</button>
+
+    <audio id="springwind" controls>
       <source src="Spring Wind.mp3" type="audio/mpeg">
     </audio>
+
+
+
+
+<button><div class="play" id="btn1">♫ spring wind ♫</div></button>
+
+<button><div class="play" id="btn2">♫ nostalgic spring ♫</div></button>
+
+<button><div class="play" id="btn3">♫ winter ♫</div></button>
+<button><div class="play" id="btn4">♫ silent night ♫</div></button>
+<button><div class="play" id="btn6">♫ rain drops ♫</div></button>
+<button><div class="play" id="btn5">♫ bird </div></button>
+<button><div class="play" id="btn7">♫ thunder </div></button>
+<button><div class="play" id="btn8">♫ stream </div></button>
+<button><div class="play" id="btn9">♫ forest </div></button>
+<button><div class="play" id="btn10">♫ wind chimes </div></button>
+
+
+<!-- SOUNDS -->
+<audio id="sound1">
+    <source src="Spring Wind.mp3" type="audio/ogg" />
+</audio>
+
+<audio id="sound2">
+          <source src="nostalgic-spring.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="sound3">
+    <source src="winter.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound4">
+    <source src="silent-night.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound5">
+    <source src="birds.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound6">
+    <source src="rain-drops.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound7">
+    <source src="rain-and-thunder.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound8">
+    <source src="stream.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound9">
+    <source src="rain-forest-birds.mp3" type="audio/ogg" />
+</audio>
+<audio id="sound10">
+    <source src="wind-chimes-bells.mp3" type="audio/ogg" />
+</audio>
+
+
     
-    <div class="main-container">
-        <div class="option-container-top">
-        </div>
-        <div class="tree">
-            <img class="tree-spring-green draggable" src="tree-spring-green.png">
-            <!-- <img class="tree-spring-green draggable" src="tree-spring-blossom.png">
-            <img class="tree-spring-green draggable" src="tree-summer.png">
-            <img class="tree-spring-green draggable" src="tree-fall1.png">
-            <img class="tree-spring-green draggable" src="tree-fall2.png">
-            <img class="tree-spring-green draggable" src="tree-winter.png"> -->
-            <img class="tree-bloom" src="tree-spring-blossom.png">
-            <img class="tree-summer" src="tree-summer.png">
-            <img class="tree-fall1" src="tree-fall1.png">
-            <img class="tree-fall2" src="tree-fall2.png">
-            <img class="tree-winter" src="tree-winter.png">
+            <img class="tree-spring-green drag" src="tree-spring-green.png">
+            <img class="tree-bloom drag" src="tree-spring-blossom.png">
+            <img class="tree-summer drag" src="tree-summer.png">
+            <img class="tree-fall1 drag" src="tree-fall1.png">
+            <img class="tree-fall2 drag" src="tree-fall2.png">
+            <img class="tree-winter drag" src="tree-winter.png">
             
-        </div>
-        <div class="option-container-bottom">
-            
-        </div>
-    </div>
+
 
     <div id="menu" class="box">
         <a href="index.html"><img src="puzzle button.png"></a>
@@ -48,14 +91,15 @@
 
 
 
-<div id="obj"class="blossom">
-        <a href="index.html"><img src="blossom template.png"></a>
-</div>
+<!-- <div id="obj"class="blossom">
+        <a href="index.html"><img class="drag" src="blossom template.png"></a>
+</div> -->
+
 
 
 
 <script>
-    var audioElement = document.getElementById("my-sound");
+    var audioElement = document.getElementById("springwind");
     function togglePlay() {
         if (audioElement.paused) {
             audioElement.play();
@@ -83,6 +127,7 @@
             <script src="jquery-3.6.4.min.js">
             </script>
             <script src="jquery-ui.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
             <script src="functions.js"></script>
     </body>
     </html>
