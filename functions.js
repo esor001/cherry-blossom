@@ -43,6 +43,14 @@ $(".spring-btn").click(function(){
 
   });
 
+  $(".roundpostlight-btn").click(function(){
+    $(".postlight-round").toggleClass("reveal");
+  });
+
+  $(".curvypostlight-btn").click(function(){
+    $(".postlight-curve").toggleClass("reveal");
+  });
+
 
   $( ".drag" ).draggable();
 

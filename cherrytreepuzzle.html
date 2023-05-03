@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+        <title>puzzle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="puzzle.css">
+        <style>
+                /* body {
+                  background-image: url('galaxy5.gif');
+                } */
+        </style>
+</head>
+
+<body>
+        <div id="container">
+        
+         
+        <button class="reveal-btn">reveal</button>
+        <button id="music-btn" onclick="togglePlay()">♫</button>
+        <audio id="my-sound" loop controls>
+         <source src="Spring Wind.mp3" type="audio/mpeg">
+        </audio>
+        <button class="bloom-btn">petals</button>
+
+    <button class="hint-btn">hint</button>
+
+
+        <div class="flex">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_01.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_02.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_03.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_04.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_05.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_06.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_07.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_08.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_09.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_10.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_11.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_12.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_13.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_14.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_15.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_16.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_17.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_18.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_19.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_20.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_21.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_22.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_23.png">
+                <img class="puzzle draggable" src="cherry-tree-puzzle image/beginner/cherrytree-puzzle-beginner-pieces_24.png">
+              
+        </div>
+
+        <div class="flex">
+                <img class="hint draggable" src="cherryblossom-puzzle-hint.png">
+        </div>
+        
+        </div>
+
+        <script>
+                var audioElement = document.getElementById("my-sound");
+                function togglePlay() {
+                    if (audioElement.paused) {
+                        audioElement.play();
+                    }
+                    else {
+                        audioElement.pause();
+                    }
+                };
+                </script>
+        <script src="jquery-3.6.4.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+        <script src="script.js"></script>
+</body>
+</html>
