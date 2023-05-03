@@ -3,8 +3,8 @@
 }
 
 body {
-    background:lightblue;
-    transition: background 1s;
+    background-color:rgb(211, 237, 246);
+    transition: background-color 1s;
 }
 
 audio {
@@ -64,6 +64,58 @@ audio {
 .show {
     opacity: 1;
 }
+
+    
+@media screen and (max-width: 1500px) {
+  
+    body {
+      background-color: lightblue;
+      /* background-image: url(tree6.png); */
+    }
+  }
+    
+  @media screen and (max-width: 1300px) {
+  
+    body {
+      background-color: lightblue;
+      /* background-image: url(tree5.png); */
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    /* FALL */
+  
+    body {
+      background-color: rgb(48, 163, 189);
+      /* background-image: url(tree4.png); */
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    /* SUMMER */
+  
+    body {
+      background-color: rgb(254, 249, 190);
+      /* background-image: url(tree3.png); */
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    /* SPRING */
+  
+    body {
+      background-color: rgb(170, 203, 140);
+      /* background-image: url(tree2.png); */
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    /* SPRING */
+  
+    body {
+      background-color: rgb(170, 203, 140);
+      /* background-image: url(tree1.png); */
+    }
+  }
 
 @keyframes spin {
     0% {
